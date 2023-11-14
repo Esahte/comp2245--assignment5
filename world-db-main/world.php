@@ -23,32 +23,36 @@ $stmt->execute(['country' => "%$country%"]);
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <table>
-    <tr>
-        <?php if ($lookup === 'cities'): ?>
-            <th>Name</th>
-            <th>District</th>
-            <th>Population</th>
-        <?php else: ?>
-            <th>Country Name</th>
-            <th>Continent</th>
-            <th>Independence Year</th>
-            <th>Head of State</th>
-        <?php endif; ?>
-    </tr>
-    <?php foreach ($results as $row): ?>
+    <thead>
         <tr>
             <?php if ($lookup === 'cities'): ?>
-                <td><?= $row['name'] ?></td>
-                <td><?= $row['district'] ?></td>
-                <td><?= $row['population'] ?></td>
+                <th>Name</th>
+                <th>District</th>
+                <th>Population</th>
             <?php else: ?>
-                <td><?= $row['name'] ?></td>
-                <td><?= $row['continent'] ?></td>
-                <td><?= $row['independence_year'] ?></td>
-                <td><?= $row['head_of_state'] ?></td>
+                <th>Country Name</th>
+                <th>Continent</th>
+                <th>Independence Year</th>
+                <th>Head of State</th>
             <?php endif; ?>
         </tr>
-    <?php endforeach; ?>
+    </thead>
+    <tbody>
+        <?php foreach ($results as $row): ?>
+            <tr>
+                <?php if ($lookup === 'cities'): ?>
+                    <td><?= $row['name'] ?></td>
+                    <td><?= $row['district'] ?></td>
+                    <td><?= $row['population'] ?></td>
+                <?php else: ?>
+                    <td><?= $row['name'] ?></td>
+                    <td><?= $row['continent'] ?></td>
+                    <td><?= $row['independence_year'] ?></td>
+                    <td><?= $row['head_of_state'] ?></td>
+                <?php endif; ?>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
 </table>
 
 

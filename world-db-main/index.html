@@ -16,15 +16,20 @@
 
 <body>
 <header>
-    <h1>World Database Lookup</h1>
+    <div class="head_container">
+        <img src="./img/undraw_connected_world_wuay.svg" alt="globe">
+        <h1>World Database Lookup</h1>
+    </div>
 </header>
 
 <main>
     <div id="controls">
-        <label for="country">Country:</label>
+        <label for="country" style="visibility: hidden">Country:</label>
         <input id="country" type="search" name="country" placeholder="Enter country name"/>
-        <button id="lookup">Lookup</button>
-        <button id="lookupCities">Lookup Cities</button>
+        <div class="buttons">
+            <button id="lookup">Lookup Country</button>
+            <button id="lookupCities">Lookup Cities</button>
+        </div>
     </div>
 
     <div id="result">
