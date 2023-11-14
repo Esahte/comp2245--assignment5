@@ -33,5 +33,5 @@ in an HTML table.
 ### Back to JavaScript/jQuery
 
 Once the PHP file has processed the request and generated a response, the response is sent back to the JavaScript file.
-The JavaScript file then inserts the response (an HTML table) into the ‘result’ div on the web page.
+The JavaScript file then inserts the response (an HTML table) into the ‘result’ div on the web page.😊
 
