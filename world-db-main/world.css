@@ -3,12 +3,20 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: DM Sans, serif
+    font-family: DM Sans, serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 header {
-    background-color: #233142;
+    background-color: #3f3d55;
     color: white;
     font-family: Ultra, serif;
 }
@@ -50,6 +58,7 @@ input {
     border-radius: 5px;
     box-shadow: 2px 2px 4px #ccc;
     font-size: 16px;
+    cursor: text;
 }
 
 button {
@@ -65,12 +74,12 @@ button {
 }
 
 #lookup {
-    background-color: #66bfbf;
+    background-color: #38b1ab;
     font-weight: bold;
 }
 
 #lookupCities {
-    background-color: #005792;
+    background-color: #4198df;
     font-weight: bold;
 }
 
@@ -79,6 +88,7 @@ table {
     border-radius: 6px;
     width: 100%;
     border-collapse: collapse;
+    color: #495467;
 }
 
 tr {
@@ -87,7 +97,7 @@ tr {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: #ebeef4;
 }
 
 th, td {
@@ -96,7 +106,7 @@ th, td {
 }
 
 th {
-    font-weight: 900;
+    font-weight: 800;
 }
 
 td {
