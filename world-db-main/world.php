@@ -10,8 +10,8 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-$country = $_GET['country'];
-$lookup = $_GET['lookup'] ?? 'countries';
+$country = filter_input(INPUT_GET, 'country', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$lookup = filter_input(INPUT_GET, 'lookup', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? 'countries';
 
 if ($lookup === 'cities') {
     $stmt = $conn->prepare("SELECT cities.name, cities.district, cities.population FROM cities JOIN countries ON cities.country_code = countries.code WHERE countries.name LIKE :country");
